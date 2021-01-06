@@ -2,6 +2,8 @@
 
 # POST REGISTER
 
+_POST_ https://rlfitnessapi.herokuapp.com/api/auth/register
+
 1. role_id: Enter 1 for instructor, enter 2 for student
 2. your form should have INPUT option 1 || 2, **MUST be a NUMBER** value
 3. After successful register, generate a token to login
@@ -16,6 +18,8 @@
 ```
 
 # POST LOGIN
+
+_POST_ https://rlfitnessapi.herokuapp.com/api/auth/login
 
 1. Use username and password from register and login
 

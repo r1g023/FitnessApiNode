@@ -40,7 +40,7 @@
 ## GET USERS, GET USER BY ID, UPDATE EMAIL ONLY, DELETE USER
 
 1. _Instructor or Users can see array of list of users_
-2. _GET_ http://localhost:5000/api/users/
+2. _GET_ https://rlfitnessapi.herokuapp.com/api/users/
 
 ```javascript
 [
@@ -53,8 +53,8 @@
 ];
 ```
 
-3. _GET BY ID_ http://localhost:5000/api/users/:id
-4. _PATCH_ http://localhost:5000/api/users/:id > _can only update by email address_
+3. _GET BY ID_ https://rlfitnessapi.herokuapp.com/api/users/:id
+4. _PATCH_ https://rlfitnessapi.herokuapp.com/api/users/:id > _can only update by email address_
 
 ```javascript
     {
@@ -67,7 +67,7 @@
 # GET CLASSES /api/classes
 
 1. **Instructor or Users can see array of list of classes, but only an instructor can UPDATE, DELETE, ADD a class**
-2. _GET_ http://localhost:5000/api/classes/
+2. _GET_ https://rlfitnessapi.herokuapp.com/api/classes/
 
 ```javascript
 {
@@ -86,8 +86,8 @@
   },
 ```
 
-3. _GET BY ID_ http://localhost:5000/api/classes/:id
-4. _POST_ http://localhost:5000/api/classes/_*INSTRUCTOR ONLY*_
+3. _GET BY ID_ https://rlfitnessapi.herokuapp.com/api/classes/:id
+4. _POST_ https://rlfitnessapi.herokuapp.com/api/classes _*INSTRUCTOR ONLY*_
 
 ```javascript
 {
@@ -103,7 +103,7 @@
 }
 ```
 
-5. _PUT_ http://localhost:5000/api/classes/:id _\**INSTRUCTOR ONLY*\_can edit all properties_
+5. _PUT_ https://rlfitnessapi.herokuapp.com/api/classes/:id _\**INSTRUCTOR ONLY*\_can edit all properties_
 
 ```javascript
 {
@@ -119,11 +119,11 @@
 }
 ```
 
-5. _DELETE_ http://localhost:5000/api/users/:id _*INSTRUCTOR ONLY*_
+5. _DELETE_ https://rlfitnessapi.herokuapp.com/api/users/:id _*INSTRUCTOR ONLY*_
 
 # SEE LIST OF CLASSES JOINED BY USER ID / _JOIN A CLASS_
 
-1. _GET_ http://localhost:5000/api/users/:id/userClasses _Instructors and Users can see this_
+1. _GET_ https://rlfitnessapi.herokuapp.com/api/users/:id/userClasses _Instructors and Users can see this_
 
 ### User can see all classes they joined by **class_id**
 
@@ -154,7 +154,7 @@
 ]
 ```
 
-2. _POST_ http://localhost:5000/api/users/:id/joinClass
+2. _POST_ https://rlfitnessapi.herokuapp.com/api/users/:id/joinClass
    - **User_id is the Id of the user logged in, if joining a class, use user_id && class_id**
    - **To join the class, enter the class_id # into the body to target that class**
    - **entering user_id: 1, class_id: 6 will have you join class id of # 6, etc..**

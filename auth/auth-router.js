@@ -1,4 +1,4 @@
-require("dotenv").config;
+require("dotenv").config();
 const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcryptjs");
@@ -7,7 +7,7 @@ const {
   validateRegisterPost,
   validateLoginPost,
 } = require("../middlewares/middleware-stacks");
-const Users = require("../users/users-model");
+const Users = require("../users/users-model.js");
 
 //POST /api/auth/register ---> REGISTER a new user
 // {username: "", password: "", email: "", role: ""}

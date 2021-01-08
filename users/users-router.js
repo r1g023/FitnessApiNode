@@ -63,7 +63,7 @@ router.post("/:id/joinClass", checkUserID(), (req, res, next) => {
   Users.addClassByUserId(id, newPost)
     .then((clasz) => {
       res.status(201).json({
-        class_added_to_user: `class added to user_id: ${id}`,
+        class_added_to_user: `class added to user_id: ${id} ${req.decodedToken.username}`,
         newPost,
       });
     })

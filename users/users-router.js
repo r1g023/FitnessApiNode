@@ -8,7 +8,6 @@ const { checkUserID, userEmail } = require("../middlewares/middleware-stacks");
 
 //GET /api/users
 router.get("/", (req, res, next) => {
-  console.log("req.decodedToken----->", req.decodedToken);
   Users.getUsers()
     .then((user) => {
       user

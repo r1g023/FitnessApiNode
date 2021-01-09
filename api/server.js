@@ -28,7 +28,7 @@ server.use("/api/classes", restrict(), classesRouter);
 
 //global middleware for .catch on all endpoints
 server.use((err, req, res, next) => {
-  console.log("err--->", err);
+  // console.log("err--->", err);
   res.status(500).json({ Error: "500 Error, what happened?" });
 });
 

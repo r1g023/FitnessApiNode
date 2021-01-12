@@ -1,5 +1,5 @@
 require("dotenv").config();
-const Users = require("../users/users-model");
+const Users = require("../users/users-model.js");
 const Classes = require("../classes/classes-model");
 const jwt = require("jsonwebtoken");
 
@@ -210,11 +210,7 @@ function checkRole() {
       //Go to next stack, and see endpoint if instructor
       next();
     } else {
-      console.log(
-        "not authorized",
-        "req.decodedToken.role----->",
-        req.decodedToken.role
-      );
+      console.log("req.decodedToken.role----->", req.decodedToken.role);
       res
         .status(403)
         .json({ message: "Not authorized, you need to be an instructor" });

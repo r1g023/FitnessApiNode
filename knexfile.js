@@ -37,18 +37,19 @@ module.exports = {
   },
   production: {
     client: "pg",
-    //automatically configured in heroku config vars
     connection: process.env.DATABASE_URL,
     migrations: {
       directory: "./database/migrations",
-      // tableName: "knex_migrations",
+      tableName: "knex_migrations",
     },
     seeds: {
       directory: "./database/seeds",
     },
-    pool: {
-      min: 2,
-      max: 10,
-    },
+    // pool: {
+    //   afterCreate: (conn, done) => {
+    //     // runs after a connection is made to the sqlite engine
+    //     conn.run("PRAGMA foreign_keys = ON", done); // turn on FK enforcement
+    //   },
+    // },
   },
 };

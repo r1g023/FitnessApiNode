@@ -35,3 +35,6 @@
 
 #ENV
 .env
+
+#SQlite3 Databases
+*.db3

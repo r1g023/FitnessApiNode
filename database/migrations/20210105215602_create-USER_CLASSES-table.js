@@ -13,7 +13,7 @@ exports.up = function (knex) {
         tbl.string("password", 128).notNull();
         tbl.string("email", 128).notNull().unique();
         tbl
-          .integer("role_id") // student or instructor
+          .bigInteger("role_id") // student or instructor
           .unsigned()
           .notNull()
           .references("roles.id") // || .inTable("roles")
@@ -25,7 +25,7 @@ exports.up = function (knex) {
         tbl.increments();
         tbl.string("name", 128).notNull();
         tbl.string("type", 128).notNull();
-        tbl.integer("class_date").notNull();
+        tbl.string("class_date").notNull();
         tbl.string("start_time", 128).notNull();
         tbl.decimal("duration").notNull();
         tbl.string("intensity", 128).notNull();

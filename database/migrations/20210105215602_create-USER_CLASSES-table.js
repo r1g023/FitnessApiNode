@@ -13,7 +13,7 @@ exports.up = function (knex) {
         tbl.string("password", 128).notNull();
         tbl.string("email", 128).notNull().unique();
         tbl
-          .bigInteger("role_id") // student or instructor
+          .integer("role_id") // student or instructor
           .unsigned()
           .notNull()
           .references("roles.id") // || .inTable("roles")
